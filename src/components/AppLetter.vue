@@ -18,10 +18,20 @@ import { store } from '../store';
             returnLetter(){
                 console.log(this.letter);
                 
+                
+                if(!this.store.random.includes(this.letter)){
+                     this.store.error++;
 
+                    if(this.store.error === 5){
+                        this.store.error = 'GAME OVER'
+                        return this.store.visibleAlphabet = false;       
+                    }
+                }
                 if(!this.store.matchLetter.includes(this.letter)){
                     return this.store.matchLetter.push(this.letter);
                 }
+
+                
             }
         }
     }

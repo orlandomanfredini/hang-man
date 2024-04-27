@@ -1,7 +1,8 @@
 <template>
   <AppHeader />
   <AppLengthLetter />
-  <AppAlphabet />
+  <AppAlphabet v-if="store.visibleAlphabet" />
+  <AppError />
   
   
 </template>
@@ -12,6 +13,7 @@ import {store} from './store.js'
 import AppHeader from './components/AppHeader.vue';
 import AppAlphabet from './components/AppAlphabet.vue';
 import AppLengthLetter from './components/AppLengthLetter.vue';
+import AppError from './components/AppError.vue';
 
 
 
@@ -21,6 +23,7 @@ import AppLengthLetter from './components/AppLengthLetter.vue';
       AppHeader,
       AppAlphabet,
       AppLengthLetter,
+      AppError,
     },
     data(){
       return{ 

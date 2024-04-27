@@ -28,10 +28,8 @@ export default {
             store: store,
             
         }
-    },
-    methods: {
-       
     }
+    
 }
 </script>
 

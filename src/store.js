@@ -8,5 +8,6 @@ export const store = reactive ({
     ],
     currentLetter: '',
     matchLetter: [],
-    
+    error: 0,
+    visibleAlphabet: true,
 })
